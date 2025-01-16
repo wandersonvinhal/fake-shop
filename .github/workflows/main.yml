@@ -7,7 +7,7 @@ jobs:
     CI:
       runs-on: ubuntu-latest
       steps:
-        - name: Action de teste
+        - name: Obter o código do projeto
           uses: actions/checkout@v4
 
         - name: Autenticar no Docker Hub
@@ -25,3 +25,16 @@ jobs:
             tags: |
               wandersonvinhal/fake-shop:latest
               wandersonvinhal/fake-shop:v${{ github.run_number }}
+
+    CD:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Action de teste
+          uses: actions/checkout@v4
+
+        - name: Configure AWS Credentials
+          uses: aws-actions/configure-aws-credentials@v4
+          with:
+            aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+            aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws-region: us-east-1
