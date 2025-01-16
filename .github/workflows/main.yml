@@ -34,7 +34,7 @@ jobs:
         contents: read
         actions: read
       steps:
-        - name: Action de teste
+        - name: Obter o código do projeto
           uses: actions/checkout@v4
 
         - name: Configure AWS Credentials
