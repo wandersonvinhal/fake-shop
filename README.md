@@ -4,14 +4,10 @@ Este repositório contém um exemplo de pipeline CI/CD integrado com Kubernetes 
 
 ## Estrutura do Projeto
 
-├── README.md # Documentação do projeto
-├── .github/
-│ └── workflows/
-│ └── main.yaml # Pipeline CI/CD configurado para o GitHub Actions
-├── src/ # Código-fonte do projeto
-├── deployment.yaml # Arquivo de deployment para Kubernetes
-└── grafana/
-└── dashboard.png # Captura de tela do dashboard do Grafana
+- **.github/workflows/main.yaml**: Workflow do GitHub Actions para configurar o pipeline CI/CD.
+- **src/**: Diretório onde fica o código-fonte da aplicação.
+- **deployment.yaml**: Arquivo de configuração para o deploy no Kubernetes.
+- **grafana/dashboard-flask.png**: Captura de tela do dashboard configurado no Grafana.
 
 ## Pipeline CI/CD (GitHub Actions)
 
