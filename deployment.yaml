@@ -45,6 +45,10 @@ spec:
       app: fake-shop
   template:
     metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '5000'
+        prometheus.io/path: '/metrics'
       labels:
         app: fake-shop
     spec:
